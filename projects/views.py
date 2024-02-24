@@ -28,7 +28,8 @@ def navbar(request):
 def main(request):
   return render(request,'main.html')
 def show_events(request):
-  return render(request,'show_events.html')
+  events = Event.objects.all()
+  return render(request, 'show_events.html', {'events': events})
 def loginpage(request):
   if request.method =='POST':
     username = request.POST.get('username')

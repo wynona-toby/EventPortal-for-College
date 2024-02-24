@@ -23,9 +23,13 @@ class Faculty(models.Model):
 class Event(models.Model):
     name = models.CharField(max_length=100)
     date = models.DateField()
+    days = models.CharField(max_length=2)
     location = models.CharField(max_length=200)
-    faculty =  models.CharField(max_length=100)
+    faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
     club = models.CharField(max_length=100)
-
+    description = models.CharField(max_length=700)
+    cost = models.DecimalField(max_digits=5, decimal_places=2)
+    intake = models.IntegerField()
+    highlights = models.CharField(max_length=200)
     def __str__(self):
         return self.name
