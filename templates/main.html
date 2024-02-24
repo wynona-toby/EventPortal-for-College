@@ -1,0 +1,38 @@
+{%include 'navbar.html'%}
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Oswald", sans-serif;
+}
+.main {
+  margin-left: 310px; /* Same as the width of the sidenav */
+  margin-top: 100px;
+}
+.section{
+  margin-left: 310px; /* Same as the width of the sidenav */
+  margin-top: 10px;
+  height: 80px;
+  width: 1200px;
+  background: blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 15px;}
+}
+</style>
+</head>
+<body>
+  <div class="section">
+    <h1> welcome, name!</h1>
+  </div>
+<div class="main">
+
+  {%block content%}
+  {%endblock%}
+</div>
+</body>
