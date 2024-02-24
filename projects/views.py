@@ -6,19 +6,29 @@ from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth.decorators  import login_required
 from .forms import UserProfileForm
-
-
 from .models import *
-from .forms import CreateUserForm
+from .forms import CreateUserForm, EventForm
+from .decorators import allowed_users
 
+def add_event(request):
+    if request.method == 'POST':
+        form = EventForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('dashboard')
+    else:
+        form = EventForm()
+    return render(request, 'add_event.html', {'form': form})
 
-
+# @allowed_users(allowed_roles=['students'])
 def dashboard(request):
   return render(request,'dashboard.html')
 def navbar(request):
   return render(request,'navbar.html')
 def main(request):
   return render(request,'main.html')
+def show_events(request):
+  return render(request,'show_events.html')
 def loginpage(request):
   if request.method =='POST':
     username = request.POST.get('username')

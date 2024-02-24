@@ -19,3 +19,13 @@ class Faculty(models.Model):
   
   def __str__(self):
     return self.name
+
+class Event(models.Model):
+    name = models.CharField(max_length=100)
+    date = models.DateField()
+    location = models.CharField(max_length=200)
+    faculty =  models.CharField(max_length=100)
+    club = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name

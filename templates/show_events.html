@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details</title>
+</head>
+<body>
+    <h1>Event Details</h1>
+    <ul>
+        {% for event in events %}
+        <li>
+            <h2>{{ event.title }}</h2>
+            <p><strong>Date:</strong> {{ event.date }}</p>
+            <p><strong>Location:</strong> {{ event.location }}</p>
+            <p><strong>Description:</strong> {{ event.description }}</p>
+            <!-- Add additional details as needed -->
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
