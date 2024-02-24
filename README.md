@@ -11,6 +11,11 @@ This is an Event Management System built with Django, designed to facilitate the
 - Event Registration: Users can register for events, and event organizers can manage event registrations.
 - Faculty Integration: Events can be associated with faculty members, allowing for better organization and categorization of events.
 
+## Web Design
+
+View the design template of our project on Figma : https://www.figma.com/community/file/1343331997824447596/eventsease
+The styling used in the project has been sourced from bootstrap
+
 ## Installation
 
 1. Clone the repository:
