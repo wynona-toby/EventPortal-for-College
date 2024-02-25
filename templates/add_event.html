@@ -1,3 +1,5 @@
+{%extends 'main.html'%}
+{%block content%}
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,13 +13,17 @@
   <body class="p-3 m-0 border-0 bd-example m-0 border-0">
     <form method="post">
       {% csrf_token %}
-      <div class="input-group input-group-sm mb-3">
-        <span class="input-group-text" id="inputGroup-sizing-sm"> Name</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="name" name="name">
-      </div>
+      <label for="event_name">Name:</label><br>
+      <input type="text" id="event_name" name="event_name"><br>
 
       <label for="date">Date:</label><br>
       <input type="date" id="date" name="date"><br>
+
+      <label for="club">Club:</label><br>
+      <input type="text" id="club" name="club"><br>
+
+      <label for="days">Days:</label><br>
+      <input type="integer" id="days" name="days"><br>
 
       <label for="location">Location:</label><br>
       <input type="text" id="location" name="location"><br>
@@ -25,21 +31,23 @@
       <label for="faculty">Faculty:</label>
         <select name="faculty" id="faculty">
             {% for faculty_member in faculty %}
-                <option value="{{ faculty_member.id }}">{{ faculty_member.name }}</option>
+                <option value="{{ faculty_member.name }}">{{ faculty_member.name }}</option>
             {% endfor %}
         </select><br>
+      
+      <label for="description">Description:</label><br>
+      <input type="text" id="description" name="description"><br>
 
-      <label for="club">Club:</label><br>
-      <input type="text" id="club" name="club"><br>
+      <label for="cost">Cost:</label><br>
+      <input type="text" id="cost" name="cost"><br>
+      
+      <label for="intake">Intake:</label><br>
+      <input type="text" id="intake" name="intake"><br>
+      
+      <label for="highlight_event">Highlight Event:</label><br>
+      <input type="text" id="highlight_event" name="highlight_event"><br>
 
       <input type="submit" value="Submit">
 
-
-
-
-    days = models.CharField(max_length=2)
-    description = models.CharField(max_length=700)
-    cost = models.DecimalField(max_digits=5, decimal_places=2)
-    intake = models.IntegerField()
-    highlights 
   </form>
+  {%endblock%}

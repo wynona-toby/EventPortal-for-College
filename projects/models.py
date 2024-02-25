@@ -1,3 +1,5 @@
+
+
 from django.db import models
 #create your model here
 class Student(models.Model):
@@ -27,9 +29,9 @@ class Event(models.Model):
     location = models.CharField(max_length=200)
     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
     club = models.CharField(max_length=100)
-    description = models.CharField(max_length=700)
+    description = models.TextField()
     cost = models.DecimalField(max_digits=5, decimal_places=2)
     intake = models.IntegerField()
-    highlights = models.CharField(max_length=200)
+    highlight_event = models.TextField()
     def __str__(self):
         return self.name

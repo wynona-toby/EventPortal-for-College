@@ -1,3 +1,6 @@
+
+
+
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.forms import inlineformset_factory
@@ -60,49 +63,3 @@ def logoutpage(request):
   logout(request)
   return redirect('login')
 
-
-# @login_required
-# def loginpage(request):
-#     if request.method == 'POST':
-#         username = request.POST.get('username')
-#         password = request.POST.get('password')
-#         user = authenticate(request, username=username, password=password)
-#         if user is not None:
-#             if user.post == 'student' and 'rollno' in request.POST:
-#                 # Authenticate user as a student with rollno
-#                 # ...
-#                 return redirect('dashboard')
-#             elif user.post == 'faculty' and 'id' in request.POST:
-#                 # Authenticate user as a faculty with id
-#                 # ...
-#                 return redirect('dashboard')
-#             else:
-#                 messages.error(request, "Invalid credentials")
-#         else:
-#             messages.error(request, "Invalid credentials")
-#     else:
-#         user = request.user
-#     return render(request, 'login.html', {'user': user})
-
-# def loginpage(request):
-  # User = get_user_model()
-  # if request.method =='POST':
-  #   username=request.POST.get('username')
-  #   password=request.POST.get('password')
-  #   if User.objects.filter(username=username).exists() or User.objects.filter(username=username, is_student=True).exists() or User.objects.filter(username=username, is_faculty=True).exists():
-  #     # Authenticate user
-  #     user = authenticate(request, username=username, password=password)
-  #     # If user is authenticated
-  #     if user is not None:
-  #       # Log in user
-  #       login(request, user)
-  #       # Redirect to dashboard
-  #       return redirect('dashboard')
-  #     else:
-  #       # Display error message
-  #       messages.error(request, "Username or Password is incorrect")
-  #   else:
-  #     # Display error message
-  #     messages.error(request, "Username does not exist in student or faculty table")
-  # # Render login template
-  # return redirect('dashboard')

@@ -45,9 +45,10 @@ body {
 <body>
 
 <div class="sidenav">
-  <a href="{% url 'register' %}">DASHBOARD</a>
+  <img src='https://i.postimg.cc/wxXYRt7H/EVENTEASE-5-removebg-preview-2-1.png' alt='EVENTEASE-5-removebg-preview-2-1'/>
+  <a href="{% url 'dashboard' %}">DASHBOARD</a>
   <a href="#">APPLICATION STATUS</a>
-  <a href="#">PAST APPLICATION</a>
+  <a href="{%url 'show_events'%}">PAST APPLICATION</a>
   <a href="{%url 'add_event'%}">NEW APPLICATION</a>
 </div>
 
