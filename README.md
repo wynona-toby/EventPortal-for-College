@@ -73,10 +73,4 @@ your_env_name\scripts\Activate
 python manage.py runserver
 ```
 3. Go to url http://127.0.0.1:8000/loginpage/ to access loginpage and move forward with web view
-4. Use pre determined users in the backend of the django admin panel (eg. WynonaToby : wynona1022265)
 
-## Extra Links
-1. Video Presentation : https://drive.google.com/file/d/1TwsSX7zEL8U-hH8sUaqWRdNo61ghh3bU/view?usp=sharing
-2. Screenshots of AdminPanel (superuser) : https://postimg.cc/gallery/tXrZ2NY
-3. PPT link : https://docs.google.com/presentation/d/1oQML9QN-Dgng0SZLFz1kbrIcs-dmZa_k/edit?usp=sharing&ouid=109589083325915143090&rtpof=true&sd=true
-4. Figma File : https://www.figma.com/community/file/1343331997824447596/eventsease
